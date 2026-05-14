@@ -7,7 +7,8 @@ class CustomListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 150,
+      width: 180,
+      height: 270,
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(

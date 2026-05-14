@@ -2,14 +2,22 @@ import 'package:bookly_app/features/home/presentation/views/widgets/custom_list_
 import 'package:flutter/material.dart';
 
 class FutureListView extends StatelessWidget {
-  const FutureListView({super.key});
+  const FutureListView({
+    super.key,
+    this.heightFactor = 0.3,
+    this.widthFactor = 0.4,
+  });
+
+  final double heightFactor;
+  final double widthFactor;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 15),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * .3,
+        height: MediaQuery.of(context).size.height * heightFactor,
+
         child: ListView.builder(
           itemCount: 10,
           scrollDirection: Axis.horizontal,
