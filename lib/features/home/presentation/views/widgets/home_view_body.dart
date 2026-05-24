@@ -20,8 +20,8 @@ class HomeViewBody extends StatelessWidget {
         const FutureListView(),
         const SizedBox(height: 5),
         Padding(
-          padding: const EdgeInsets.only(left: 12),
-          child: Text('Best Seller', style: AppStyles.TitleMedium),
+          padding: const EdgeInsets.only(left: 12, top: 10),
+          child: Text('Newest Books', style: AppStyles.TitleMedium),
         ),
         const BestSellerListView(),
       ],

@@ -1,4 +1,6 @@
 import 'package:bookly_app/core/utils/app_styles.dart';
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
+import 'package:bookly_app/features/home/data/models/book_model/item.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/Custom_book_details_app_bar.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/Future_list_view.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_actions.dart';
@@ -6,20 +8,43 @@ import 'package:bookly_app/features/home/presentation/views/widgets/custom_list_
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({super.key});
+  const BookDetailsViewBody({super.key, this.book});
+  final Item? book;
 
   @override
   Widget build(BuildContext context) {
+    final title = book?.volumeInfo?.title ?? 'No title available';
+    final author = book?.volumeInfo?.authors?.first ?? 'No author available';
+    final imageUrl = book?.volumeInfo?.imageLinks?.thumbnail;
+
     return Column(
       children: [
         CustomDetailsBookAppBar(),
         Padding(
           padding: const EdgeInsets.only(left: 35),
-          child: CustomListViewItem(),
+          child: CustomListViewItem(book: book),
         ),
-        Text('The Jungle Book', style: AppStyles.TitleBold),
-        Text('Rudyard Kipling', style: AppStyles.Titlesmall),
-        const SizedBox(height: 7),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 2),
+          child: Text(
+            title,
+            style: AppStyles.TitleBold,
+            textAlign: TextAlign.center,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Text(
+            author,
+            style: AppStyles.Titlesmall,
+            textAlign: TextAlign.center,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
+        const SizedBox(height: 2),
         Padding(
           padding: const EdgeInsets.only(left: 140),
           child: Row(
@@ -32,12 +57,12 @@ class BookDetailsViewBody extends StatelessWidget {
             ],
           ),
         ),
-        BookActions(),
+        BookActions(book: book),
         Padding(
           padding: const EdgeInsets.only(right: 210),
           child: Text('You can also like', style: AppStyles.TitleMedium),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 10),
         const FutureListView(heightFactor: 0.25, widthFactor: 0.40),
       ],
     );

@@ -8,7 +8,7 @@ class Book_Rating extends StatelessWidget {
     return Row(
       children: [
         Text(
-          '19.99 \$',
+          'Free',
           style: TextStyle(
             fontSize: 14,
             fontFamily: 'Cairo',

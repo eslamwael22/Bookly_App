@@ -9,6 +9,7 @@ class CustomBottom extends StatelessWidget {
     this.fontSize,
     this.borderRadius,
     required this.fontweight,
+    this.onPressed,
   });
   final String text;
   final Color BackgroundColor;
@@ -16,6 +17,7 @@ class CustomBottom extends StatelessWidget {
   final double? fontSize;
   final BorderRadius? borderRadius;
   final FontWeight fontweight;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class CustomBottom extends StatelessWidget {
       height: 50,
       width: 160,
       child: TextButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: TextButton.styleFrom(
           backgroundColor: BackgroundColor as Color?,
           shape: RoundedRectangleBorder(

@@ -1,5 +1,9 @@
+import 'package:bookly_app/core/utils/App_Routers.dart';
+import 'package:bookly_app/features/home/presentation/view_model/Featured_books_cubit/feuterd_books_cubit.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_list_view_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class FutureListView extends StatelessWidget {
   const FutureListView({
@@ -15,14 +19,26 @@ class FutureListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 15),
-      child: SizedBox(
-        height: MediaQuery.of(context).size.height * heightFactor,
-
-        child: ListView.builder(
-          itemCount: 10,
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) => const CustomListViewItem(),
-        ),
+      child: BlocBuilder<FeuterdBooksCubit, FeuterdBooksState>(
+        builder: (context, state) {
+          if (state is FeuterdBooksSuccess) {
+            return SizedBox(
+              height: MediaQuery.of(context).size.height * heightFactor,
+              child: ListView.builder(
+                itemCount: state.books.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  final book = state.books[index];
+                  return CustomListViewItem(book: book);
+                },
+              ),
+            );
+          } else if (state is FeuterdBooksFailure) {
+            return Center(child: Text(state.errMessage));
+          } else {
+            return const Center(child: CircularProgressIndicator());
+          }
+        },
       ),
     );
   }
