@@ -23,7 +23,7 @@ A Flutter app for discovering and previewing free eBooks powered by the Google B
 
 1. Clone the repo
 ```bash
-   git clone https://github.com/your-username/bookly_app.git
+   git clone https://github.com/eslamwael22/Bookly_App.git
 ```
 2. Install dependencies
 ```bash
