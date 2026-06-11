@@ -1,3 +1,4 @@
+import 'package:bookly_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SearchTextFiled extends StatelessWidget {
@@ -6,8 +7,8 @@ class SearchTextFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      decoration: const InputDecoration(
-        labelText: 'Search...',
+      decoration: InputDecoration(
+        labelText: S.of(context).search_placeholder,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(30)),
         ),

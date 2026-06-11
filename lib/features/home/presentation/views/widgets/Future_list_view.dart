@@ -1,9 +1,7 @@
-import 'package:bookly_app/core/utils/App_Routers.dart';
 import 'package:bookly_app/features/home/presentation/view_model/Featured_books_cubit/feuterd_books_cubit.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class FutureListView extends StatelessWidget {
   const FutureListView({

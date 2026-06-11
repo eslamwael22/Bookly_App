@@ -1,6 +1,5 @@
 import 'package:bookly_app/core/utils/App_Routers.dart';
 import 'package:bookly_app/core/utils/app_assets.dart';
-import 'package:bookly_app/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

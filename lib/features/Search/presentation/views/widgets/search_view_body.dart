@@ -1,5 +1,6 @@
 import 'package:bookly_app/features/Search/presentation/views/widgets/search_text_filed.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/Best_seller_list_view.dart';
+import 'package:bookly_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SearchViewBody extends StatelessWidget {
@@ -17,7 +18,7 @@ class SearchViewBody extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(right: 230),
           child: Text(
-            'Search Result',
+            S.of(context).search_result,
             style: Theme.of(context).textTheme.bodyLarge!.copyWith(
               fontSize: 20,
               fontWeight: FontWeight.w500,

@@ -1,3 +1,4 @@
+import 'package:bookly_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class Book_Rating extends StatelessWidget {
@@ -8,7 +9,7 @@ class Book_Rating extends StatelessWidget {
     return Row(
       children: [
         Text(
-          'Free',
+          S.of(context).free,
           style: TextStyle(
             fontSize: 14,
             fontFamily: 'Cairo',

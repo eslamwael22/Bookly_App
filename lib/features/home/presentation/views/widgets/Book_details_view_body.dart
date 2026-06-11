@@ -1,7 +1,7 @@
 import 'package:bookly_app/core/utils/app_styles.dart';
-import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/data/models/book_model/item.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/Custom_book_details_app_bar.dart';
+import 'package:bookly_app/generated/l10n.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/Future_list_view.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_actions.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_list_view_item.dart';
@@ -13,8 +13,9 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final title = book?.volumeInfo?.title ?? 'No title available';
-    final author = book?.volumeInfo?.authors?.first ?? 'No author available';
+    final title = book?.volumeInfo?.title ?? S.of(context).no_title_available;
+    final author =
+        book?.volumeInfo?.authors?.first ?? S.of(context).no_author_available;
     final imageUrl = book?.volumeInfo?.imageLinks?.thumbnail;
 
     return Column(
@@ -60,7 +61,10 @@ class BookDetailsViewBody extends StatelessWidget {
         BookActions(book: book),
         Padding(
           padding: const EdgeInsets.only(right: 210),
-          child: Text('You can also like', style: AppStyles.TitleMedium),
+          child: Text(
+            S.of(context).you_can_also_like,
+            style: AppStyles.TitleMedium,
+          ),
         ),
         const SizedBox(height: 10),
         const FutureListView(heightFactor: 0.25, widthFactor: 0.40),

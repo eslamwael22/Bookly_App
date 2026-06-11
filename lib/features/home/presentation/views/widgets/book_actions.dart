@@ -1,6 +1,6 @@
 import 'package:bookly_app/core/widgets/custom_bottom.dart';
-import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/data/models/book_model/item.dart';
+import 'package:bookly_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -13,8 +13,8 @@ class BookActions extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20, bottom: 8, left: 40),
       child: Row(
         children: [
-          const CustomBottom(
-            text: 'For Free',
+          CustomBottom(
+            text: S.of(context).for_free,
             BackgroundColor: Colors.white,
             textColor: Colors.black,
             fontSize: 20,
@@ -36,7 +36,7 @@ class BookActions extends StatelessWidget {
                 await launchUrl(url, mode: LaunchMode.externalApplication);
               }
             },
-            text: 'Preview',
+            text: S.of(context).preview,
             BackgroundColor: const Color(0xffEF8262),
             textColor: Colors.white,
             fontSize: 20,
