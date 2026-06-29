@@ -1,39 +1,100 @@
 # 📚 Bookly
 
-A Flutter app for discovering and previewing free eBooks powered by the Google Books API.
+<p align="center">
+  <img src="assets/ChatGPT Image Jun 29, 2026, 01_45_45 PM.png" alt="Bookly Cover" width="100%">
+</p>
+
+<p align="center">
+A modern Flutter application for discovering, searching, and previewing free eBooks using the Google Books API.
+</p>
+
+---
 
 ## ✨ Features
 
 - 📖 Browse thousands of free eBooks
-- 📄 View book details and open previews in browser
+- 🔍 Search books by title or author
+- 📚 View detailed book information
+- 🌐 Open book previews in your browser
 - 🖼️ Smooth image loading with caching
+- ⚡ Fast and responsive user experience
 
-## 🛠️ Tech Stack
+---
 
-- **Flutter** & **Dart**
-- **BLoC / Cubit** — State Management
-- **MVVM** — Architecture Pattern
-- **Dio** — HTTP Client & API Integration
-- **GoRouter** — Navigation
-- **CachedNetworkImage** — Image Caching
-- **url_launcher** — Open book previews in browser
+## 📱 Screenshots
 
+| Home | Book Details | Splash |
+|------|--------------|---------|
+| <img src="screenshots/home.png" width="220"> | <img src="screenshots/details.png" width="220"> | <img src="screenshots/splash.png" width="220"> |
+
+---
+
+## 🛠 Tech Stack
+
+- Flutter
+- Dart
+- BLoC / Cubit
+- MVVM Architecture
+- Dio
+- GoRouter
+- CachedNetworkImage
+- url_launcher
+- Google Books API
+
+---
+
+## 📂 Project Structure
+
+```
+lib
+├── core
+├── features
+│   ├── splash
+│   ├── home
+│   │   ├── data
+│   │   └── presentation
+│   │       ├── views
+│   │       ├── view_model
+│   │       └── widgets
+│   └── search
+└── main.dart
+```
+
+---
 
 ## 🚀 Getting Started
 
-1. Clone the repo
+### Clone the repository
+
 ```bash
-   git clone https://github.com/eslamwael22/Bookly_App.git
-```
-2. Install dependencies
-```bash
-   flutter pub get
-```
-3. Run the app
-```bash
-   flutter run
+git clone https://github.com/eslamwael22/Bookly_App.git
 ```
 
-## 🔑 API
+### Install dependencies
 
-This app uses the [Google Books API]https://www.googleapis.com/books/v1/volumes).
+```bash
+flutter pub get
+```
+
+### Run the app
+
+```bash
+flutter run
+```
+
+---
+
+## 🔗 API
+
+This project uses the **Google Books API**.
+
+https://developers.google.com/books
+
+---
+
+## 👨‍💻 Author
+
+**Eslam Wael**
+
+- LinkedIn: https://www.linkedin.com/in/eslam-eldash/
+- Portfolio: https://eslamwael22.github.io/My_Portfolio/
