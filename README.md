@@ -1,3 +1,4 @@
+
 # 📚 Bookly
 
 <p align="center">
@@ -23,9 +24,9 @@ A modern Flutter application for discovering, searching, and previewing free eBo
 
 ## 📱 Screenshots
 
-| Home | Book Details | Splash |
-|------|--------------|---------|
-| <img src="assets/Screenshot_1781190913.png" width="220"> | <img src="assets/Screenshot_1781190929.png" width="220"> | <img src="assets/Screenshot_1781190904.png" width="220"> |
+| Splash Screen | Home | Book Details |
+|--------------|------|--------------|
+| <img src="assets/Screenshot_1781190904.png" width="220"> | <img src="assets/Screenshot_1781190913.png" width="220"> | <img src="assets/Screenshot_1781190929.png" width="220"> |
 
 ---
 
@@ -45,7 +46,7 @@ A modern Flutter application for discovering, searching, and previewing free eBo
 
 ## 📂 Project Structure
 
-```
+```text
 lib
 ├── core
 ├── features
@@ -98,3 +99,5 @@ https://developers.google.com/books
 
 - LinkedIn: https://www.linkedin.com/in/eslam-eldash/
 - Portfolio: https://eslamwael22.github.io/My_Portfolio/
+````
+
