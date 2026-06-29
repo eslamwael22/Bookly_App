@@ -25,7 +25,7 @@ A modern Flutter application for discovering, searching, and previewing free eBo
 
 | Home | Book Details | Splash |
 |------|--------------|---------|
-| <img src="screenshots/home.png" width="220"> | <img src="screenshots/details.png" width="220"> | <img src="screenshots/splash.png" width="220"> |
+| <img src="assets/Screenshot_1781190913.png" width="220"> | <img src="assets/Screenshot_1781190929.png" width="220"> | <img src="assets/Screenshot_1781190904.png" width="220"> |
 
 ---
 
